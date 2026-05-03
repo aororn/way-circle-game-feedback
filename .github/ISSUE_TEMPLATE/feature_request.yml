@@ -1,0 +1,58 @@
+name: 💡 Идея / предложение
+description: Идея новой механики, NPC, баланс, UI-улучшение, что-то про лор.
+title: "[IDEA] "
+labels: ["idea", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что делишься идеей! Не все идеи попадут в игру — но все будут прочитаны.
+        Поля со ⭐ обязательные.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: ⭐ В чём идея
+      description: Опиши коротко — что ты предлагаешь?
+      placeholder: |
+        Добавить в город таверну, где можно нанимать временных спутников на 1 день за серебро.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: ⭐ Какую проблему это решает (или какой опыт улучшает)
+      description: Зачем это нужно? Что сейчас не так или чего не хватает?
+      placeholder: |
+        Сейчас одиночные походы за ресурсами скучные, и нет способа получить временный буст без долгого крафта.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: К какой области относится
+      multiple: true
+      options:
+        - Геймплей / механики
+        - Баланс
+        - NPC / диалоги / лор
+        - UI / интерфейс
+        - Мобильная версия
+        - Прогрессия / квесты
+        - Экономика / торговля
+        - Анимации / звук
+        - Другое
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Альтернативы
+      description: Думал ли ты о других способах решить ту же проблему?
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Доп. контекст
+      description: Скриншоты, ссылки, примеры из других игр — всё, что поможет понять идею.

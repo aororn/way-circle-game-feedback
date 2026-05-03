@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Как правильно сообщить о баге
+    url: https://github.com/aororn/way-circle-game-feedback/blob/main/README.md
+    about: Прочитай инструкцию перед созданием issue — это сильно ускорит фикс.
+  - name: 🔍 Поиск по существующим issues
+    url: https://github.com/aororn/way-circle-game-feedback/issues
+    about: Возможно, твой баг уже зарепортили. Проверь перед созданием нового.

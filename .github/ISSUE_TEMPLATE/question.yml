@@ -1,0 +1,29 @@
+name: ❓ Вопрос
+description: Непонятно, как что-то работает, или нужна помощь.
+title: "[Q] "
+labels: ["question", "triage"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: ⭐ Вопрос
+      description: Что непонятно?
+      placeholder: |
+        Как открыть второй слот для NPC-помощника? Я уже на ★4 и в подсказках написано, что должно открыться, но я не вижу.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: Что уже пробовал
+      description: Что ты сделал, чтобы разобраться самому?
+      placeholder: |
+        Перезагрузил страницу, посмотрел в окно «Помощники» — пусто.
+
+  - type: input
+    id: account
+    attributes:
+      label: Имя персонажа
+      description: По желанию, но помогает посмотреть твой прогресс.
+      placeholder: "Тест1"

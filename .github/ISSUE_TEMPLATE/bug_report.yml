@@ -1,0 +1,120 @@
+name: 🐛 Сообщить о баге
+description: Что-то сломалось, зависло, посчиталось неправильно или выглядит криво.
+title: "[BUG] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за репорт! Чем подробнее опишешь — тем быстрее починим.
+        Поля со ⭐ обязательные.
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: ⭐ Что произошло
+      description: Опиши проблему в 1–3 предложениях. Что ты увидел?
+      placeholder: |
+        Зашёл на этаж 3, ударил волка — урон не списался, у волка осталось 100% HP.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ⭐ Что ожидалось
+      description: Как должно было быть по-твоему?
+      placeholder: |
+        После удара у волка должен был упасть HP, как на этажах 1–2.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: ⭐ Шаги, чтобы воспроизвести
+      description: Пошагово, что ты делал. Чем подробнее, тем лучше.
+      placeholder: |
+        1. Зашёл в игру под аккаунтом X
+        2. Открыл «Этажи» → этаж 3
+        3. Нажал «Атаковать» на волке
+        4. Урон 0, HP волка не изменился
+    validations:
+      required: true
+
+  - type: input
+    id: when
+    attributes:
+      label: ⭐ Когда это случилось
+      description: Дата и примерное время (по твоему часовому поясу). Нужно, чтобы найти сессию в логах.
+      placeholder: "4 мая 2026, около 18:30 (МСК)"
+    validations:
+      required: true
+
+  - type: input
+    id: account
+    attributes:
+      label: Имя персонажа / email аккаунта
+      description: По желанию, но сильно помогает найти твою сессию.
+      placeholder: "Тест1 / mihail@example.com"
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: ⭐ Устройство
+      options:
+        - Десктоп (Windows / Mac / Linux)
+        - Телефон Android
+        - iPhone / iPad
+        - Другое
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: ⭐ Браузер
+      options:
+        - Chrome
+        - Safari
+        - Firefox
+        - Edge
+        - Yandex
+        - Opera
+        - Другой (уточни в комментарии)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Насколько мешает
+      options:
+        - 🔥 Блокер — играть невозможно
+        - ⚠️ Серьёзный — мешает прогрессу
+        - 🟡 Средний — раздражает, но работаю в обход
+        - 💡 Мелочь — заметил, но не критично
+      default: 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Скриншот / видео
+      description: Перетащи картинку прямо сюда. Для визуальных багов это самое важное.
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Ошибки в консоли браузера
+      description: |
+        Если умеешь — открой DevTools (F12 на десктопе) → вкладка Console → скопируй красные строчки сюда.
+        Если не умеешь — пропусти, ничего страшного.
+      render: text
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Что ещё может быть полезно
+      description: Любые детали — что делал до бага, повторяется ли, помогает ли перезагрузка страницы.
